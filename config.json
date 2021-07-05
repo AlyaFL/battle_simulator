@@ -1,0 +1,6 @@
+{
+    "count_of_armies": 2,
+    "count_of_squads_per_army": 10,
+    "count_of_units_per_squad": 10,
+    "random_seed": 123
+  }
