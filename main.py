@@ -27,7 +27,7 @@ class Main:
         
         If armies has no squads than it is removed
         """
-        self.armies = [army for army in self.armies if army.squades]
+        self.armies = [army for army in self.armies if army.squads]
 
     def run(self):
         while len(self.armies) > 1:

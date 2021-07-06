@@ -59,15 +59,15 @@ class Vehicle(Unit):
     def health(self, value):
         self._health = value
 
-    def get_damage(self, value):
+    def get_damage(self, damage):
         """Amount of damage vehicles can get from enemy
         
         Args:
-            value: int
+            damage: int
         """
-        vehicle_damage = value * 0.6
-        operator_damage = value * 0.2
-        other_damage = value * 0.1
+        vehicle_damage = damage * 0.6
+        operator_damage = damage * 0.2
+        other_damage = damage * 0.1
         self.health -= vehicle_damage
         active_operators = [op for op in self.operators]
         random_operators = choice(active_operators)

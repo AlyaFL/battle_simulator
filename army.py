@@ -53,18 +53,17 @@ class Army:
         for sq in self.squads:
             squad.get_experience()
 
-    def get_damage(self, value):
+    def get_damage(self, damage):
         """Amount of damage army can get from enemy
         
         Args:
-            value: int
+            damage: int
         """
         for sq in self.squads:
-            sq.get_damage(value)
+            sq.get_damage(damage)
             if sq.health <= 0:
                 self.squad.remove(sq)
 
     def create_squads(self):
-        """Fills squads[] with Squad instance"""
-        for _ in range(settings.COUNT_OF_SQUADS_PER_ARMY):
+        for i in range(settings.COUNT_OF_SQUADS_PER_ARMY):
             self.squads.append(Squad(self.strategy, self.random))

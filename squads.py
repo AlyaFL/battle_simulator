@@ -25,7 +25,7 @@ class Squad:
         Returns:
             int
         """  
-        return sum(unit.damage for unit in self.units)
+        return sum([unit.damage for unit in self.units])
 
     @property
     def health(self):

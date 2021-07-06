@@ -6,7 +6,7 @@ import settings
 class RandomEnemy:
     @staticmethod
     def select(enemies):
-        return choice(enemies.units)
+        return Random(settings.RANDOM_SEED).choice(enemies)
         
 class StongestEnemy:
     @staticmethod
